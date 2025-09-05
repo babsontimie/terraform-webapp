@@ -3,13 +3,11 @@ variable "prefix" {
    default = "ghact"
 
 }
-variable "location" {
-   type = string
-   default = "uk south"
 
-}
 variable "env" {
    type = string
    default = "dev"
 
 }
+variable "resource_group_name" {}
+variable "location" {}
