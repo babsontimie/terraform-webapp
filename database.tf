@@ -3,8 +3,8 @@ resource "azurerm_mssql_server" "githubActions-server" {
   resource_group_name          = var.resource_group_name
   location                     = var.location
   version                      = "12.0"
-  administrator_login          = "teeadmin"
-  administrator_login_password = "Kala8Kuta"
+  administrator_login          = "ratatata"
+  administrator_login_password = "<DB-PW>"
 
   tags = {
     environment = "${var.prefix}-mssql-server"
