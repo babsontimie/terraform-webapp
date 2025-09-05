@@ -1,7 +1,7 @@
-provider "azurerm" {
-  features {}
-  subscription_id = "95fbbc3d-a6cd-46ba-a12d-0f923877e0bb"
-}
+#provider "azurerm" {
+#  features {}
+#  subscription_id = "95fbbc3d-a6cd-46ba-a12d-0f923877e0bb"
+#}
 
 resource "azurerm_service_plan" "githubActions-svcplan" {
   name                = "${var.prefix}-svcplan"
