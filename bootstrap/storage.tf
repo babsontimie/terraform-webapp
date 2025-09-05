@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "ghActions-storacct" {
   account_replication_type = "LRS"
 
   tags = {
-    environment = "staging"
+    environment = "dev"
   }
 
   #   timeouts {
