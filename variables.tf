@@ -1,12 +1,12 @@
 variable "prefix" {
-   type = string
-   default = "ghact"
+  type    = string
+  default = "ghact"
 
 }
 
 variable "env" {
-   type = string
-   default = "dev"
+  type    = string
+  default = "dev"
 
 }
 variable "resource_group_name" {}
