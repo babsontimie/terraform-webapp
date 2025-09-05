@@ -50,6 +50,15 @@ resource "azurerm_linux_web_app" "githubActions-web-app" {
   site_config {
     always_on = false
   }
+  app_settings = {
+    "SOME_KEY" = "some-value"
+  }
+
+  connection_string {
+    name  = "Database"
+    type  = "SQLServer"
+    value = "Server=tcp:azurerm_mssql_server.githubActions-server.fully_qualified_domain_name  Database=azurerm_mssql_database.githubActions-dbase.name;User ID=azurerm_mssql_server.githubActions-server.administrator_login;Password=Database=azurerm_mssql_server.githubActions-server.administrator_login_password;Trusted_Connection=False;Encrypt=True;"
+  }
 }
 
 resource "azurerm_linux_web_app_slot" "GithubActions-webapp-slot" {

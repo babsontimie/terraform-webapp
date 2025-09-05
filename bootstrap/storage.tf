@@ -1,8 +1,8 @@
 
 resource "azurerm_storage_account" "ghActions-storacct" {
   name                     = "${var.prefix}storaccount"
-  resource_group_name      = azurerm_resource_group.githubActions-resgrp.name
-  location                 = azurerm_resource_group.githubActions-resgrp.location
+  resource_group_name      = azurerm_resource_group.bluegreen-resgrp.name
+  location                 = azurerm_resource_group.bluegreen-resgrp.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
