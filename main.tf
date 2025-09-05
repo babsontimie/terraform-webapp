@@ -3,18 +3,6 @@ provider "azurerm" {
   subscription_id = "95fbbc3d-a6cd-46ba-a12d-0f923877e0bb"
 }
 
-# resource "azurerm_resource_group" "githubActions-resgrp" {
-#   name     = "${var.prefix}-resgrp"
-#   location = "West Europe"
-# }
-# data "azurerm_resource_group" "githubActions-resgrp" {
-#   name = "${var.prefix}-resgrp"
-# }
-
-# output "id" {
-#   value = data.azurerm_resource_group.githubActions-resgrp.id
-# }
-
 resource "azurerm_service_plan" "githubActions-svcplan" {
   name                = "${var.prefix}-svcplan"
   resource_group_name = var.resource_group_name
