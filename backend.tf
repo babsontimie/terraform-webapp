@@ -9,9 +9,9 @@
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "ghact-resgrp"
-    storage_account_name = "ghactstoraccount"
-    container_name       = "ghact-tfstate"
+    resource_group_name  = "bluegreen-resgrp"
+    storage_account_name = "bluegreenstoraccount"
+    container_name       = "bluegreen-tfstate"
     key                  = "remote/terraform.tfstate"
   }
 }

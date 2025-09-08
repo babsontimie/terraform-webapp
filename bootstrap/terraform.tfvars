@@ -1,3 +1,3 @@
-resource_group_name = "ghact-resgrp"
+resource_group_name = "bluegreen-resgrp"
 location            = "uk south"
 

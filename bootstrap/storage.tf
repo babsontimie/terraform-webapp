@@ -1,5 +1,5 @@
 
-resource "azurerm_storage_account" "ghActions-storacct" {
+resource "azurerm_storage_account" "bluegreen-storacct" {
   name                     = "${var.prefix}storaccount"
   resource_group_name      = azurerm_resource_group.bluegreen-resgrp.name
   location                 = azurerm_resource_group.bluegreen-resgrp.location
@@ -15,8 +15,8 @@ resource "azurerm_storage_account" "ghActions-storacct" {
   # }
 }
 
-resource "azurerm_storage_container" "ghActions" {
+resource "azurerm_storage_container" "bluegreen" {
   name                  = "${var.prefix}-tfstate"
-  storage_account_id    = azurerm_storage_account.ghActions-storacct.id
+  storage_account_id    = azurerm_storage_account.bluegreen-storacct.id
   container_access_type = "private"
 }
